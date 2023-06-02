@@ -24,6 +24,7 @@
 <script>
 import api from '@/Api/api'
 import FilmItem from './FilmItem.vue'
+
 export default {
     name: 'FilmRow',
     data() {
@@ -35,13 +36,13 @@ export default {
         FilmItem
     },
     props: {
-        title: String
+        title: String,
+        fetchURL: String
     },
     methods: {
         async fetchFilms() {
             try {
-                const response = await api.get(`v2.2/films/top?type=TOP_250_BEST_FILMS&page=1`)  
-                console.log(response.data.films)            
+                const response = await api.get(`${this.fetchURL}`)           
                 this.films = response.data.films.slice(0, 6)
 
             } catch {
