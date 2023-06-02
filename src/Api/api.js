@@ -1,9 +1,9 @@
 import axios from 'axios'
 
 const api = axios.create({
-    baseURL: 'https://kinopoiskapiunofficial.tech/api/',
+    baseURL: process.env.VUE_APP_baseURL,
     headers: {
-        'X-API-KEY': '1e69d574-cb0e-42ba-ae2b-a8644817561a',
+        'X-API-KEY': process.env.VUE_APP_X_API_KEY,
         'Content-Type': 'application/json',
     }
 })

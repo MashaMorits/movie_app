@@ -18,7 +18,7 @@
 
 <script>
 
-import api from '@/Api/api'
+import api from '@/api/api'
 import { useFavoritesStore } from '@/store/favorites'
 export default {
     name: 'FilmPage',

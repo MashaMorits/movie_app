@@ -1,25 +1,22 @@
-import HomePage from '@/pages/HomePage'
-import FilmsPage from '@/pages/FilmsPage'
-import FilmPage from '@/pages/FilmPage'
-import FavoritesPage from '@/pages/FavoritesPage'
+
 import { createRouter, createWebHistory } from 'vue-router'
 
 const routes = [
     {
         path: '/',
-        component: HomePage
+        component: () => import('@/pages/HomePage')
     },
     {
         path: '/allfilms',
-        component: FilmsPage
+        component: () => import('@/pages/FilmsPage')
     },
     {
         path: '/films/:id',
-        component: FilmPage
+        component: () => import('@/pages/FilmPage')
     },
     {
         path: '/favorites',
-        component: FavoritesPage
+        component: () => import('@/pages/FavoritesPage')
     }
 ]
 

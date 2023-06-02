@@ -1,0 +1,1 @@
+.film__item{border-radius:10px;overflow:hidden;display:flex;cursor:pointer;transform:scale(1);transition:all .2s linear}.film__item:hover{transform:scale(1.05);transition:all .3s linear}.film__item img{width:100%;height:auto}.favorites__page-wrap{display:grid;grid-template-columns:repeat(6,1fr);gap:15px}
